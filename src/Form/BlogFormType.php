@@ -18,12 +18,14 @@ class BlogFormType extends AbstractType
             ->add('title',TextType::class, [
                 "attr"=>[
                     "class"=>"form-control",
-                ]
+                ],
+                "required"=>false,
             ])
             ->add('description',TextareaType::class, [
                 "attr"=>[
                     "class"=>"form-control mb-2",
-                ]
+                ],
+                "required"=>false,
             ])
             ->add('image',
             FileType::class, array(

@@ -138,4 +138,19 @@ class HomeController extends AbstractController
         }   
     }
 
+    #[Route('/delete/{id}',methods:["get", "delete"], name: 'delete')]
+    public function delete($id): Response
+    {
+        $blog= $this->blogRepository->find($id);
+        if($blog){
+            $this->em->remove($blog);
+            $this->em->flush();
+            return $this->redirectToRoute('blogs');
+        }  else{
+            return $this->redirectToRoute('blogs');
+        }     
+
+
+    }
+
 }
