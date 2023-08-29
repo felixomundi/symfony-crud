@@ -5,5 +5,5 @@ Start your xampp/wamp
 symfony console doctrine:database:create
 
 # make migrations and migrate 
-symfony console make:migration
-symfony  console doctrine:migrations:migrate
+## symfony console make:migration <br>
+## symfony  console doctrine:migrations:migrate
